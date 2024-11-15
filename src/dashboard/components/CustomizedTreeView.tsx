@@ -144,10 +144,9 @@ const CustomTreeItem = React.forwardRef(function CustomTreeItem(
     publicAPI,
   } = useTreeItem2({ id, itemId, children, label, disabled, rootRef: ref });
 
-  const item = publicAPI.getItem(itemId);
-  const color = item?.color;
+  const color = undefined;
   return (
-    <TreeItem2Provider itemId={itemId}>
+    // <TreeItem2Provider itemId={itemId}>
       <TreeItem2Root {...getRootProps(other)}>
         <TreeItem2Content
           {...getContentProps({
@@ -173,7 +172,7 @@ const CustomTreeItem = React.forwardRef(function CustomTreeItem(
           />
         )}
       </TreeItem2Root>
-    </TreeItem2Provider>
+    // </TreeItem2Provider>
   );
 });
 
