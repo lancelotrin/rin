@@ -1,11 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Blog from "./material/Blog";
+import Main from "./component/Main";
+import Content from "./component/Content";
+
+
+
 
 function App() {
   return (
-    <Blog></Blog>
+    <Main>
+     <Content></Content>
+    </Main>
   );
 }
 

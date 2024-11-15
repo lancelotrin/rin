@@ -92,7 +92,7 @@ export default function TemplateFrame({
                   size="small"
                   labelId="theme-select-label"
                   id="theme-select"
-                  value={showCustomTheme ? 'custom' : 'material'}
+                  value={showCustomTheme ? 'custom' : 'blog'}
                   onChange={handleChange}
                   label="Design Language"
                 >
