@@ -1,10 +1,10 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import AppAppBar from "../blog/components/AppAppBar";
+import AppAppBar from "../../blog/components/AppAppBar";
 import Container from "@mui/material/Container";
-import MainContent from "../blog/components/MainContent";
+import MainContent from "../../blog/components/MainContent";
 import {createTheme} from "@mui/material/styles";
 import * as React from "react";
-import getBlogTheme from "../blog/theme/getBlogTheme";
+import getBlogTheme from "../../blog/theme/getBlogTheme";
 import Latest from "./Latest";
 
 

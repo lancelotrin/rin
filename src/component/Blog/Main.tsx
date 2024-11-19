@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from "react";
 import {createTheme, PaletteMode, styled, ThemeProvider} from "@mui/material/styles";
-import getBlogTheme from "../blog/theme/getBlogTheme";
+import getBlogTheme from "../../blog/theme/getBlogTheme";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import ToggleColorMode from "../blog/components/ToggleColorMode";
+import ToggleColorMode from "../../blog/components/ToggleColorMode";
 import AppBar from "@mui/material/AppBar";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import Button from "@mui/material/Button";
+import Content from "./Content";
 
 interface MainProps {
     children:React.ReactNode
@@ -59,7 +60,7 @@ export default function Main({children}:MainProps){
                                value={customTheme ? 'custom' : 'blog'}
                                onChange={handleChange}
                                label="Design Language"
-                           >
+                               >
                                <MenuItem value="custom">Custom Theme</MenuItem>
                                <MenuItem value="material">Material Design 2</MenuItem>
                            </Select>
@@ -67,7 +68,9 @@ export default function Main({children}:MainProps){
                    </Box>
                 </Toolbar>
                </StyledAppBar>
-               <Box sx={{ flex: '1 1', overflow: 'auto' }}>{children}</Box>
+               <Box sx={{ flex: '1 1', overflow: 'auto' }}>
+                   <Content></Content>
+               </Box>
            </Box>
        </ThemeProvider>
    )
