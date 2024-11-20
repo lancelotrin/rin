@@ -7,10 +7,11 @@ import {makeStyles} from "@mui/material";
 import Nav from "./Router";
 import MyComponent from "../Demo/Hooks";
 import RefCallback from "../Demo/RefCallbacak";
+import CssBaseline from "@mui/material/CssBaseline";
 
 
 
-const mode: PaletteMode = 'light';
+const mode: PaletteMode = 'dark';
 const defaultTheme = createTheme({palette: {mode}});
 
 
@@ -19,6 +20,7 @@ const defaultTheme = createTheme({palette: {mode}});
 export default  function DashBoard(){
     return (
         <ThemeProvider theme={defaultTheme}>
+            <CssBaseline enableColorScheme />
             <main>
                 <Nav></Nav>
                 {/*<MyComponent condition={false}></MyComponent>*/}

@@ -1,7 +1,10 @@
 import Typography from "@mui/material/Typography";
+import Test from "../../Demo/Test";
+
+
 
 export default function Nav3(){
     return(
-        <Typography>Nav3</Typography>
+        <Test></Test>
     )
 }
